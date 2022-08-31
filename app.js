@@ -1,26 +1,43 @@
+let evento =  prompt(`Donde quieres salir hoy:
+1. SANA / Recital
+2. GeekParty / Festival
+3. Puerto Piojo / Documental 360
+4. Tour Isla Maciel / Paseo
+Selecciona X para temrinar
+`)
 
-// let nombre, edad;
-  
-//   nombre = prompt ('Decinos tu nombre o nick:');
-  
-//   if (nombre =="") { alert ('Te tenemos que llamar de alguna manera.'); }
-  
-//   else { alert ('Hola '+nombre + ' bienvenido!'); }
-  
-//   edad = prompt ('Cuantos años tenes: ');
-  
-//   if ( edad <=17 ) {alert ('Sos un niño! :p LLama a un adulto para poder continuar');}
-  
-//   else if (edad>=18) {alert (nombre + ' :) vamos a elegir donde salir hoy.');}
-   
-   
-  const evento = ["SANA", "Geek Party Fest", "Puert Piojo / Doc360", "Temaiken XXl"];
+let suma = " "
+let total = 0
 
-  let text = "";
-  for (let i = 0; i < evento.length; i++) {
-    text += evento[i] + " / ";
-    console.log(text);
-  } 
+while (evento != "X" && evento != "x") {
+  switch (evento) {
+    case "1":
+      suma = 700
+      break;
+    case "2":
+      suma = 800
+      break;
+    case "3":
+      suma = 600
+      break;
+    case "4":
+      suma = 500
+      break;
+    default:
+      suma = 0
+      break;  
+  }
+
+  total += suma
+  evento = prompt (`Donde quieres salir hoy:
+  1. SANA / Recital
+  2. GeekParty / Festival
+  3. Puerto Piojo / Documental 360
+  4. Tour Isla Maciel / Paseo
+  Selecciona X para temrinar
+  `)
+}
+alert(`Tienes acumulado un total de: ${total}`)
 
   
 
